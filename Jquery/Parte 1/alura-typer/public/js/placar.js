@@ -23,7 +23,12 @@ function novaLinha(usuario,palavras){
 
 function removeLinha(event){
     event.preventDefault();
-    $(this).parent().parent().remove();
+    var linha = $(this).parent().parent();
+    linha.fadeOut(500);
+    setInterval(function(){
+        linha.remove();
+    },500);
+
 }
 
 function inserePlacar(){
@@ -36,4 +41,19 @@ function inserePlacar(){
     linha.find(".botao-remover").click(removeLinha);
 
     corpoTabela.prepend(linha);
+    $(".placar").slideDown(500);
+    scrollPlacar();
+}
+
+function scrollPlacar() {
+    var posicaoPlacar = $(".placar").offset().top;
+    $("body").animate({
+      scrollTop: posicaoPlacar + "px"
+    },1000)
+}
+
+$("#botao-placar").click(mostraPlacar);
+
+function mostraPlacar(){
+    $(".placar").stop().slideToggle(600);
 }
