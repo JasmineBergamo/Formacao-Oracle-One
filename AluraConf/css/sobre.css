@@ -1,0 +1,16 @@
+.painel-sobre{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.painel-sobre .titulo {
+
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.painel-sobre .subtitulo {
+
+    font-size: 24px;
+    margin-bottom: 16px;
+}

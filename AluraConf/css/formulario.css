@@ -1,0 +1,12 @@
+.painel-formulario {
+
+    margin-top: 32px;
+}
+
+.painel-formulario .titulo {
+    font-size: 32px;
+    color: #EF7247;
+    text-align: center;
+    text-transform: uppercase;
+}
+
